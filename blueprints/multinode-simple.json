@@ -1,9 +1,11 @@
 {
     "configurations" : [
-	"hdfs-site": 
-        {
-            "dfs.namenode.datanode.registration.ip-hostname-check" : "false"
-        }
+	{
+	    "hdfs-site": 
+	    {
+	        "dfs.namenode.datanode.registration.ip-hostname-check" : "false"
+	    }
+	}
     ],
     "host_groups" : [
         {
@@ -109,7 +111,7 @@
             "cardinality" : "1"
         },
         {
-            "name" : "slave",
+            "name" : "slave_1",
             "components" : [
                 {
                     "name" : "HBASE_REGIONSERVER"
@@ -128,7 +130,7 @@
         }
     ],
     "Blueprints" : {
-        "blueprint_name" : "blueprint-multinode-default2",
+        "blueprint_name" : "multinode-simple",
         "stack_name" : "HDP",
         "stack_version" : "2.2"
     }

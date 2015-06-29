@@ -8,7 +8,7 @@ then
 fi
 
 # Start ambari server
-cid=$(docker run -d --privileged=true -p 18080:8080 ambari /scripts/bootstrap.sh server)
+cid=$(docker run -d --privileged=true --name=ambari-server -p 18080:8080 ambari /scripts/bootstrap.sh server)
 server_ip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${cid})
 sleep 100
 
