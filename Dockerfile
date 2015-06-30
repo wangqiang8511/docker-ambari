@@ -13,6 +13,7 @@ RUN yum install -y ambari-server ambari-agent
 ADD blueprints /opt/blueprints
 ADD scripts /scripts
 ADD scripts/hostname.sh /etc/ambari-agent/conf/hostname.sh
+ADD scripts/public_hostname.sh /etc/ambari-agent/conf/public_hostname.sh
 ADD conf/ambari-agent.ini /etc/ambari-agent/conf/ambari-agent.ini
 RUN curl -o /opt/ambari-shell.jar https://s3-eu-west-1.amazonaws.com/maven.sequenceiq.com/releases/com/sequenceiq/ambari-shell/0.1.23/ambari-shell-0.1.23.jar
 
